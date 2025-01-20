@@ -22,18 +22,15 @@ To set up the project locally:
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/your-username/superheroes-management.git
-   cd superheroes-management
+   git clone https://github.com/Vaibhav-Ct/SuperHeroes-Memory.git
 
 2. Build the application:
-
 ./mvnw clean install
-Start the application:
 
-3. ./mvnw spring-boot:run
+4. ./mvnw spring-boot:run
 Verify: The application should be running on http://localhost:8080.
 
-4. Running the Application
+5. Running the Application
 Once the application is running, you can interact with it using:
 
 ### POST - Insert a New Superhero
