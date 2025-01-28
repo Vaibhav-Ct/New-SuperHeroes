@@ -1,8 +1,31 @@
 # SuperHeroes Management System 🦸‍♂️
 
 ## Introduction
-Welcome to the **SuperHeroes Management System**! This project is a simple Spring Boot application designed to manage superhero data. You can create, retrieve, update, and delete superhero records using RESTful APIs.
+# SuperHeroes Project
 
+## Overview
+The SuperHeroes Project is a Spring Boot application that demonstrates the integration of MongoDB and AWS services (S3 and SQS) using LocalStack for local development and testing. The application manages a collection of superhero data stored in MongoDB and interacts with AWS services emulated by LocalStack.
+
+## Features
+- Store superhero data in a MongoDB database.
+- Upload files to S3 and manage queues in SQS using LocalStack.
+- Provides RESTful endpoints to interact with the data and services.
+
+## Prerequisites
+- **Java 17**: Ensure you have Java 17 or higher installed.
+- **Docker**: Required to run LocalStack and MongoDB containers.
+- **Maven**: Used for building the Spring Boot project.
+- **AWS CLI**: To interact with LocalStack services from the command line.
+
+## Installation
+
+### Setup MongoDB and LocalStack with Docker
+```bash
+# Run MongoDB
+docker run --name mongodb -p 27017:27017 -d mongo:latest
+
+# Run LocalStack
+docker run --name localstack-main -p 4566:4566 -p 4510-4560:4510-4560 -d localstack/localstack
 ## Features
 - 🌟 Insert a new superhero using POST requests.
 - 🔍 Retrieve superhero details by name or universe using GET requests.
