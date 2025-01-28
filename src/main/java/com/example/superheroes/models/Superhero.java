@@ -1,11 +1,19 @@
 package com.example.superheroes.models;
 
+
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Document(collection = "superheroes")
 public class Superhero {
+    @Id
+    private String id;
     private String name;
     private String power;
     private String gender;
     private int age;
     private String universe;
+    private boolean marked = false; // New field
 
     // Constructors
     public Superhero() {}
@@ -19,6 +27,22 @@ public class Superhero {
     }
 
     // Getters and Setters
+    public boolean isMarked() {
+        return marked;
+    }
+
+    public void setMarked(boolean marked) {
+        this.marked = marked;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
     public String getName() {
         return name;
     }
@@ -58,4 +82,6 @@ public class Superhero {
     public void setUniverse(String universe) {
         this.universe = universe;
     }
+
+    // Other getters and setters remain the same
 }
